@@ -6,8 +6,15 @@ public class CD {
 	double price;
 	
 	public CD(String title, String artist, String publisher, int songs, double price) {
+		this.title = title;
+		this.artist = artist;
+		this.publisher = publisher;
+		this.songs = songs;
+		this.price = price;
 		
 	}
+	
+	
 	public String getTitle() {
 		return title;
 	}
@@ -25,6 +32,9 @@ public class CD {
 	}
 	
 	public String toString() {
+		if(price == 0) {
+			return title + ", " + artist + ", " + publisher + ", " + songs + ", Free";
+		}
 		return title + ", " + artist + ", " + publisher + ", " + songs + ", " + price;
 	}
 }
